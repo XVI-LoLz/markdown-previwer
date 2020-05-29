@@ -3,18 +3,17 @@ import Head from './Head'
 
 
 
-export default function Editor(){
-  const [ content, setContent ] = React.useState('This is the content')
-
-  console.log(content)
-
+export default function Editor({content, updateContent}){
+  const [ tempContent, setTempContent ] = React.useState(content)
+  
   const handleChange = (event) => {
-    setContent(event.target.value)
+    setTempContent(event.target.value)
+    updateContent(tempContent)
   }
   return(
     <React.Fragment>
       <Head title={'Editor'} />
-      <textarea value={content} onChange={handleChange} className='editor' />
+      <textarea id='editor' value={tempContent} onChange={handleChange} className='editor' />
     </React.Fragment>
   );
 }
