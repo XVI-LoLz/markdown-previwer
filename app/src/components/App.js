@@ -1,6 +1,6 @@
 import React from 'react';
-import Editor from './Editor'
-import Previewer from './Previewer';
+import marked from 'marked'
+import Head from './Head'
 
 import './styles/App.css';
 
@@ -53,10 +53,25 @@ And here. | Okay. | I think we get it.
 
 export default function App() {
   const [ content, setContent ] = React.useState(defaultMarkdown)
+
+  const rawMarkup = (textToConvert) => {
+    let rawMarkup = marked(textToConvert, {breaks: true, gfm: true, renderer: new marked.Renderer()})
+    return { __html: rawMarkup}
+  }
+
+  const handleChange = (event) => {
+    setContent(event.target.value)
+  }
   return (
-    <React.Fragment>
-      <Editor content={content} updateContent={(content) => setContent(content)} />
-      <Previewer content={content} />
-    </React.Fragment>
+    <div className='app'>
+      <div className='editor section'>
+        <Head title={'Editor'} color={'blue-hd'}/>
+        <textarea id='editor' value={content} onChange={handleChange} />
+      </div>
+      <div className='previewer section'>
+        <Head title={'Previewer'} color={'pink-hd'}/>
+        <div id='preview' dangerouslySetInnerHTML={rawMarkup(content)} />
+      </div>
+    </div>
   );
 }

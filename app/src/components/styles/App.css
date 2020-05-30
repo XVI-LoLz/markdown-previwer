@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto+Slab&display=swap');
+
+.app{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section{
+  box-shadow: 0 0 4px black;
+}
+
+.editor{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  height: 30vh;
+
+  font-family: 'PT Mono', monospace;
+}
+.editor textarea{
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+  padding: 8px;
+  margin: 0;
+  /* overflow: hidden; */
+  resize: none;
+  outline: none;
+  background-color: #EBF8FF;
+}
+
+.previewer{
+  width: 100%;
+  height: 100%;
+
+  font-family: 'PT Mono', monospace;
+  background-color: #FFEBF3;
+}
+
+#preview{
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+.pink-hd{
+  background-color: #FF99C3;
+}
+
+.blue-hd{
+  background-color: #70CFFF;
+}
+
+.nav{
+  display: flex;
+  height: 32px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+}
+
+.icon{
+  padding-left: 4px;
+  border-radius: 40%;
+  width: 24px;  
+}
+
+.max-btn{
+  color: transparent;
+}
+
+@media (min-width: 416px){
+  .editor{
+    margin: 32px;
+    height: 540px;
+    width: 50%;
+    font-family: 'PT Mono', monospace;
+  }
+  .previewer{
+    margin: 32px;
+    width: 66%;
+  }
+  .max-btn{
+    /* color: white; */
+    padding-right: 4px;
+  }
+}
+
