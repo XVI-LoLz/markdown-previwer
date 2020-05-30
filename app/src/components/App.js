@@ -63,11 +63,15 @@ export default function App() {
     setContent(event.target.value)
   }
   return (
-    <React.Fragment>
-      <Head title={'Editor'} />
-      <textarea id='editor' value={content} onChange={handleChange} className='editor' />
-      <Head title={'Previewer'}/>
-      <div id='preview' dangerouslySetInnerHTML={rawMarkup(content)} />
-    </React.Fragment>
+    <div className='app'>
+      <div className='editor'>
+        <Head title={'Editor'} color={'blue-hd'}/>
+        <textarea id='editor' value={content} onChange={handleChange} className='editor' />
+      </div>
+      <div className='previewer'>
+        <Head title={'Previewer'} color={'pink-hd'}/>
+        <div id='preview' dangerouslySetInnerHTML={rawMarkup(content)} />
+      </div>
+    </div>
   );
 }
