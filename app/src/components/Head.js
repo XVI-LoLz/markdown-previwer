@@ -9,7 +9,7 @@ export default function Head({ title, color }){
         {title}
       </div>
       <div className='max-btn'>
-        ⏹
+        🔳
       </div>
     </nav>
   )

@@ -4,6 +4,6 @@ body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background-color: #54545469;
-  background-image: url(./utils/mat-tile.png);
+  background-color: #fbf3ea;
+  /* background-image: url(./utils/mat-tile.png); */
 }

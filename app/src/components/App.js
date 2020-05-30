@@ -64,11 +64,11 @@ export default function App() {
   }
   return (
     <div className='app'>
-      <div className='editor'>
+      <div className='editor section'>
         <Head title={'Editor'} color={'blue-hd'}/>
-        <textarea id='editor' value={content} onChange={handleChange} className='editor' />
+        <textarea id='editor' value={content} onChange={handleChange} />
       </div>
-      <div className='previewer'>
+      <div className='previewer section'>
         <Head title={'Previewer'} color={'pink-hd'}/>
         <div id='preview' dangerouslySetInnerHTML={rawMarkup(content)} />
       </div>
