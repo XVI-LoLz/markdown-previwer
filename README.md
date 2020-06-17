@@ -1,4 +1,4 @@
-# ![logo](https://z16th-bucket.s3-us-west-1.amazonaws.com/L.png) FCC - Markdown Previewer
+# FCC - Markdown Previewer
 ![project-image](https://z16th-bucket.s3-us-west-1.amazonaws.com/fcc-projects/fcc-markdown-previewer-min.png)
 
 ## Try it
